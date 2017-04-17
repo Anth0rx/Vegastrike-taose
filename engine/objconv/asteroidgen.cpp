@@ -505,44 +505,44 @@ int main( int argc, char **argv )
             }
         }
     } else {
-		/* A number of warnings being produced here due to unused results
-		 * so commenting them out rather than removing as the likelihood
-		 * of this breaking something is high.
-		 */
-
+		int ret{0}; //Storage for scanf that's never used.
         printf( "Enter Output File:\n" );
-        scanf( "%s", filename );
+        ret = scanf( "%s", filename );
         printf( "Enter Size of field?\n" );
-        scanf( "%f", &cube_sides.i );
+        ret = scanf( "%f", &cube_sides.i );
         cube_sides.j = cube_sides.k = cube_sides.i;
         printf( "Enter number of asteroids\n" );
-        scanf( "%d", &numroids );
+        ret = scanf( "%d", &numroids );
         printf( "Enter asteroid minimum and max radius\n" );
-        scanf( "%f %f", &radiusmin, &radiusmax );
+        ret = scanf( "%f %f", &radiusmin, &radiusmax );
         printf( "Enter cragginess from 0 to 1\n" );
-        scanf( "%f", &deviation );
+        ret = scanf( "%f", &deviation );
         printf( "Enter minimum number of polys and max num polys\n" );
-        scanf( "%d %d", &poly_min, &poly_max );
+        ret = scanf( "%d %d", &poly_min, &poly_max );
         printf( "Enter size of safety zone (0 to disable)\n" );
-        scanf( "%f", &safety_zone );
+        ret = scanf( "%f", &safety_zone );
         printf( "Enter random seed (0 to use clock\n" );
-        scanf( "%d", &randomseed );
+        ret = scanf( "%d", &randomseed );
         printf( "Do you want a unit file? (y/n)\n" );
-        scanf( "%c", (char*) &num_cubes );
+        ret = scanf( "%c", (char*) &num_cubes );
         if ( (char) num_cubes == 'y' ) {
             printf( "Enter Output Unit File:\n" );
-            scanf( "%s", unitfilename );
+            ret = scanf( "%s", unitfilename );
 #ifdef RAND
             printf( "Enter number of cubes?\n" );
-            scanf( "%d", &num_cubes );
+            ret = scanf( "%d", &num_cubes );
 #else
             printf( "Enter offset of cubes?\n" );
-            scanf( "%f", &offset );
+            ret = scanf( "%f", &offset );
 #endif
             printf( "Enter inner radius?\n" );
-            scanf( "%f", &innerRadius );
+            ret = scanf( "%f", &innerRadius );
             printf( "Enter outer radius?\n" );
-            scanf( "%f", &outerRadius );
+            ret = scanf( "%f", &outerRadius );
+
+            if(ret)
+				;//Do nothing
+
         } else {
             num_cubes = 0;
             offset    = 0;
