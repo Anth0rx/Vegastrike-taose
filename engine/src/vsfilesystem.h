@@ -598,7 +598,7 @@ public: VSFile();
 private:
     void private_init();
 };
-};
+}
 
 std::ostream&operator<<( std::ostream &ostr, VSFileSystem::VSError err );
 std::ostream&operator<<( std::ostream &ostr, VSFileSystem::VSFileType type );
