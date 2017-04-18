@@ -46,12 +46,12 @@ namespace VsnetDownload
 namespace Client
 {
 class Manager;
-};
+}
 namespace Server
 {
 class Manager;
-};
-};
+}
+}
 
 class SocketSet : public VSThread
 {

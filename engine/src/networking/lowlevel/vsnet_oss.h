@@ -54,7 +54,7 @@ INLINE int socket( int domain, int type, int protocol );
 INLINE int recv( int fd, void *buf, unsigned int len, int flags );
 
 INLINE void memcpy( void *dest, const void *src, int bytesize );
-};
+}
 
 #ifdef INLINE_VSNET_OSS
 #include "vsnet_oss.cpp"

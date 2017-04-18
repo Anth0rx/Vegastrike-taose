@@ -163,7 +163,7 @@ Animation * GetRandExplosionAnimation( int whichfaction, std::string &which );
 void LoadFactionPlaylists();
 /** Still in faction_xml.cpp because createUnit **/
 void LoadContrabandLists();
-};
+}
 
 #endif
 
